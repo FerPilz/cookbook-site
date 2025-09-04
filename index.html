@@ -1,2 +1,242 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Test</title>
-<h1>It works 🎉</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Cookbook – Your personal recipe companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Cookbook helps you save recipes, plan meals, and shop smarter with store-aware ingredient pricing." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Cookbook" />
+  <meta property="og:description" content="Save the recipes you love, plan meals, and shop smarter." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="<!-- TODO: add absolute URL to a social image -->" />
+  <meta property="og:url" content="https://example.com/" />
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --brand: #10b981; /* mint */
+      --link: #2563eb;  /* bright blue */
+      --card: #f9fafb;
+      --stroke: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root{
+        --bg: #0b0b0c;
+        --text: #f5f6f7;
+        --muted: #9aa0a6;
+        --brand: #34d399;
+        --link: #60a5fa;
+        --card: #111316;
+        --stroke: #1f2937;
+      }
+    }
+    *{ box-sizing: border-box; }
+    html, body{ margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background:var(--bg); }
+    a{ color:var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .container{ max-width:1100px; margin:0 auto; padding: 24px; }
+    .hero{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:28px; align-items:center; padding: 32px 0 16px; }
+    .hero h1{ font-size: clamp(28px, 3.5vw, 48px); line-height:1.1; margin: 10px 0 8px; }
+    .tagline{ color: var(--muted); font-size: clamp(14px, 2vw, 18px); }
+    .cta{ margin-top: 18px; display:flex; gap:12px; flex-wrap: wrap; align-items:center; }
+    .btn{ display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:14px; font-weight:600; border:1px solid var(--stroke); background: var(--brand); color:#0b0b0c; }
+    .btn.secondary{ background: transparent; color: var(--text); }
+    .card{ background: var(--card); border:1px solid var(--stroke); border-radius:16px; padding:18px; }
+    .grid-3{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+    .grid-2{ display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; }
+    .section{ padding: 36px 0; }
+    h2{ font-size: clamp(22px, 2.4vw, 30px); margin: 0 0 12px; }
+    h3{ margin: 0 0 6px; font-size: 18px; }
+    .small{ font-size: 12px; color: var(--muted); }
+    .footer{ border-top:1px solid var(--stroke); padding:24px 0 40px; margin-top: 24px; }
+    .disclosure{ padding: 10px 0; color: var(--muted); }
+    .badge{ display:inline-block; background: var(--card); border:1px solid var(--stroke); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted); }
+    .logo{ height: 56px; }
+    .preview{ aspect-ratio: 16/10; background: linear-gradient(135deg, var(--card), var(--stroke)); border:1px dashed var(--stroke); border-radius:12px; }
+    @media (max-width: 860px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .grid-2{ grid-template-columns: 1fr; }
+      .logo{ height: 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <!-- TODO: point to your light/dark variant logo via asset catalog or two SVGs -->
+        <img src="<!-- TODO: /assets/AppLogoLight.svg -->" alt="The Cookbook" class="logo" />
+        <span class="badge">v1 • iOS</span>
+      </div>
+      <nav style="display:flex; gap:16px;">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#blog">Updates</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div>
+      <h1>Your personal cookbook—organized, shoppable, simple.</h1>
+      <p class="tagline">From shopping list to dinner plate—simplified.</p>
+      <div class="cta">
+        <a class="btn" href="<!-- TODO: App Store link -->">
+          <!-- You can swap this for the official App Store badge image -->
+          <span>Get it on the App Store</span>
+        </a>
+        <a class="btn secondary" href="#how">See how it works</a>
+      </div>
+      <p class="disclosure"><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
+    </div>
+    <div class="card">
+      <!-- Replace with real screenshots -->
+      <div class="preview" aria-hidden="true"></div>
+      <p class="small">Preview — Onboarding & Home</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section container">
+    <h2>How it works</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>1. Save recipes</h3>
+        <p>Collect your favorites from the web or add family recipes. Tag by cuisine, diet, and difficulty.</p>
+      </div>
+      <div class="card">
+        <h3>2. Plan & organize</h3>
+        <p>Build weekly plans and keep a tidy library with powerful search and filters.</p>
+      </div>
+      <div class="card">
+        <h3>3. Shop smarter</h3>
+        <p>Add ingredients to your cart, see store-aware pricing, and jump to checkout at your preferred retailer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section container">
+    <h2>Features</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Store-aware cart</h3>
+        <p>Map ingredients to retailer items and see estimated totals before you buy.</p>
+      </div>
+      <div class="card">
+        <h3>Personal library</h3>
+        <p>Keep recipes organized with tags, cuisine, diet, and “cook again” notes.</p>
+      </div>
+      <div class="card">
+        <h3>Fast search</h3>
+        <p>Find recipes by ingredients, time, or cuisine in a couple of taps.</p>
+      </div>
+      <div class="card">
+        <h3>Privacy-first</h3>
+        <p>Your profile is stored on device. We only send data when you opt-in (e.g., newsletter).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG / UPDATES -->
+  <section id="blog" class="section container">
+    <h2>Updates & Tips</h2>
+    <div class="grid-3">
+      <!-- Seed with ~10 short posts to show original content -->
+      <div class="card">
+        <h3>v1.0 Launch Notes</h3>
+        <p>Onboarding, personal library, and a fresh look. Here’s what’s new.</p>
+        <p class="small">Aug 2025</p>
+      </div>
+      <div class="card">
+        <h3>Meal-planning in 10 minutes</h3>
+        <p>Our workflow for a weekly plan you’ll actually stick to.</p>
+        <p class="small">Aug 2025</p>
+      </div>
+      <div class="card">
+        <h3>Ingredient equivalences 101</h3>
+        <p>Swaps that save a trip to the store without wrecking dinner.</p>
+        <p class="small">Aug 2025</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top: 10px;">More posts coming—follow along for features and recipe ideas.</p>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="section container card">
+    <div class="grid-2" style="align-items:center;">
+      <div>
+        <h2>Ready to cook smarter?</h2>
+        <p class="tagline">Download The Cookbook and keep every recipe at your fingertips.</p>
+      </div>
+      <div class="cta" style="justify-content:flex-end;">
+        <a class="btn" href="<!-- TODO: App Store link -->">Get the app</a>
+        <a class="btn secondary" href="mailto:hello@yourdomain.com">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap:18px;">
+      <div>
+        <strong>The Cookbook</strong>
+        <p class="small">Organize, plan, and shop smarter. Your personal recipe companion.</p>
+        <p class="small"><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#blog">Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="mailto:hello@yourdomain.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <hr style="border:none; border-top:1px solid var(--stroke); margin:18px 0;" />
+      <p class="small">© <span id="y"></span> The Cookbook. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- PRIVACY & TERMS (on the same page for now; you can split later) -->
+  <section id="privacy" class="section container">
+    <h2>Privacy Policy (short form)</h2>
+    <div class="card">
+      <p>We respect your privacy. The Cookbook stores your profile data on your device. If you opt in to a newsletter, we will collect your name and email solely to send updates; you may unsubscribe anytime. We use affiliate links to retailers; when you click such a link, the retailer may place cookies for attribution. For full details or data requests, contact <a href="mailto:privacy@yourdomain.com">privacy@yourdomain.com</a>.</p>
+    </div>
+  </section>
+
+  <section id="terms" class="section container">
+    <h2>Terms of Service (summary)</h2>
+    <div class="card">
+      <ul>
+        <li>The Cookbook is provided “as is,” without warranties.</li>
+        <li>You’re responsible for your account and device security.</li>
+        <li>We may update features and terms over time.</li>
+        <li>Affiliate disclosure: As an Amazon Associate we earn from qualifying purchases.</li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    // Year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
